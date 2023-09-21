@@ -13,12 +13,12 @@ class Marca(models.Model):
     def __str__(self):
         return self.nome
 
-# class Autor(models.Model):
-#     nome = models.CharField(max_length=100)
-#     email = models.EmailField(null=True, blank=True)
+class Autor(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField(null=True, blank=True)
 
-#     def __str__(self):
-#         return self.nome
+    def __str__(self):
+        return self.nome
     
 class Produto(models.Model):
     nome = models.CharField(max_length=100)
@@ -31,7 +31,7 @@ class Produto(models.Model):
         Marca, on_delete=models.PROTECT, related_name="produtos"
     )
     
-    # autores = models.ManyToManyField(Autor, related_name="livros")
+    autores = models.ManyToManyField(Autor, related_name="produtos")
 
 
     def __str__(self):

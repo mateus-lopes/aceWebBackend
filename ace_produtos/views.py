@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
-from ace_produtos.models import Categoria, Marca, Produto
-from ace_produtos.serializers import CategoriaSerializer, MarcaSerializer, ProdutoListSerializer, ProdutoSerializer, ProdutoDetailSerializer
+from ace_produtos.models import Categoria, Marca, Produto, Autor
+from ace_produtos.serializers import CategoriaSerializer, MarcaSerializer, ProdutoListSerializer, ProdutoSerializer, ProdutoDetailSerializer, AutorSerializer
 
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
@@ -19,3 +19,7 @@ class ProdutoViewSet(ModelViewSet):
         elif self.action == "retrieve":
             return ProdutoDetailSerializer
         return ProdutoSerializer
+    
+class AutorViewSet(ModelViewSet):
+    queryset = Autor.objects.all()
+    serializer_class = AutorSerializer
