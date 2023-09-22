@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
+    "usuario",
     "ace_produtos",
 ]
 
@@ -104,6 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+AUTH_USER_MODEL = "usuario.Usuario"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
