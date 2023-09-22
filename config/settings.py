@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
+    "drf_spectacular",
     "usuario",
     "uploader",
     "ace_produtos",
@@ -117,6 +118,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 
@@ -148,3 +150,10 @@ MEDIA_URL = "http://localhost:8000/media/"
 MEDIA_ENDPOINT = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 FILE_UPLOAD_PERMISSIONS = 0o640
+
+# App drf_spectacular settings
+SPECTACULAR_SETTINGS = {
+    "TITLE": "AceWeb API",
+    "DESCRIPTION": "API para gerenciamento dos produtos, incluindo endpoints e documentação.",
+    "VERSION": "1.0.0",
+}
