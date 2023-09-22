@@ -1,5 +1,5 @@
 from django.db import models
-
+from uploader.models import Image
 from ace_produtos.models import Autor, Categoria, Marca
 
 class Produto(models.Model):
@@ -12,7 +12,14 @@ class Produto(models.Model):
     marca = models.ForeignKey(
         Marca, on_delete=models.PROTECT, related_name="produtos"
     )
-    
+    imagem = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
     autores = models.ManyToManyField(Autor, related_name="produtos")
 
 

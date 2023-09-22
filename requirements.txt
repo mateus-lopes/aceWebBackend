@@ -2,6 +2,7 @@
 │ name                          │ version      │ location │
 ├───────────────────────────────┼──────────────┼──────────┤
 │ PyJWT                         │ 2.8.0        │          │
+│ python-magic                  │ 0.4.27       │          │
 │ packaging                     │ 23.1         │          │
 │ black                         │ 23.9.1       │          │
 │ Django                        │ 4.2.5        │          │
@@ -9,6 +10,7 @@
 │ asgiref                       │ 3.7.2        │          │
 │ djangorestframework           │ 3.14.0       │          │
 │ click                         │ 8.1.7        │          │
+│ Pillow                        │ 10.0.1       │          │
 │ setuptools                    │ 68.2.2       │          │
 │ django-cors-headers           │ 4.2.0        │          │
 │ isort                         │ 5.12.0       │          │
