@@ -4,13 +4,15 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from ace_produtos.views import CategoriaViewSet, MarcaViewSet, ProdutoViewSet, AutorViewSet
+from ace_produtos.views import AutorViewSet, CategoriaViewSet, MarcaViewSet, ProdutoViewSet
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"marcas", MarcaViewSet)
 router.register(r"produtos", ProdutoViewSet)
 router.register(r"autores", AutorViewSet)
+
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
