@@ -1,32 +1,25 @@
 from django.contrib import admin
 
-from .models import Categoria, Marca, Produto, Autor
+from .models import Category, Product, Gender
 
-@admin.register(Autor)
-class AutorAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'email')
-    search_fields = ('nome', 'email')
-    list_filter = ('nome',)
-    ordering = ('nome', 'email')
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title',)
+    list_filter = ('title',)
+    ordering = ('title',)
 
-@admin.register(Categoria)
-class CategoriaAdmin(admin.ModelAdmin):
-    list_display = ('descricao',)
-    search_fields = ('descricao',)
-    list_filter = ('descricao',)
-    ordering = ('descricao',)
+@admin.register(Gender)
+class GenderAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title',)
+    list_filter = ('title',)
+    ordering = ('title',)
 
-@admin.register(Marca)
-class MarcaAdmin(admin.ModelAdmin):
-    list_display = ('nome',)
-    search_fields = ('nome',)
-    list_filter = ('nome',)
-    ordering = ('nome',)
-
-@admin.register(Produto)
-class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'preco', 'marca', 'categoria', 'get_autores')
-    search_fields = ('nome', 'marca__nome', 'categoria__descricao')
-    list_filter = ('marca', 'categoria',)
-    ordering = ('nome', 'marca', 'categoria')
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('title', 'price', 'category')
+    search_fields = ('title', 'category__descricao')
+    list_filter = ('category', 'price', 'promotion')
+    ordering = ('title', 'category')
     list_per_page = 25

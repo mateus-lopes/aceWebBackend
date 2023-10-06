@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from ace_produtos.views import AutorViewSet, CategoriaViewSet, MarcaViewSet, ProdutoViewSet
+from ace_produtos.views import CategoryViewSet, GenderViewSet, ProductViewSet
 
 from usuario.router import router as usuario_router
 
@@ -16,10 +16,9 @@ from uploader.router import router as uploader_router
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 router = DefaultRouter()
-router.register(r"categorias", CategoriaViewSet)
-router.register(r"marcas", MarcaViewSet)
-router.register(r"produtos", ProdutoViewSet)
-router.register(r"autores", AutorViewSet)
+router.register(r"categories", CategoryViewSet)
+router.register(r"genders", GenderViewSet)
+router.register(r"products", ProductViewSet)
 
 urlpatterns = [
     # admin

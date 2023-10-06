@@ -1,4 +1,3 @@
-from .autor_view import AutorViewSet
-from .categoria_view import CategoriaViewSet
-from .marca_view import MarcaViewSet
-from .produto_view import ProdutoViewSet
+from .category_view import CategoryViewSet
+from .gender_view import GenderViewSet
+from .product_view import ProductViewSet

@@ -1,4 +1,3 @@
-from .autor import Autor
-from .categoria import Categoria
-from .marca import Marca
-from .produto import Produto
+from .category import Category
+from .gender import Gender
+from .product import Product

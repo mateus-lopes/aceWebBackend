@@ -1,4 +1,3 @@
-from .autor_serializer import AutorSerializer
-from .categoria_serializer import CategoriaSerializer
-from .marca_serializer import MarcaSerializer
-from .produto_serializer import ProdutoSerializer, ProdutoListSerializer, ProdutoDetailSerializer
+from .category_serializer import CategorySerializer
+from .gender_serializer import GenderSerializer
+from .product_serializer import ProductListSerializer, ProductSerializer, ProductDetailSerializer
