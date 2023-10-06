@@ -25,8 +25,8 @@ class MarcaAdmin(admin.ModelAdmin):
 
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'marca', 'categoria')
+    list_display = ('nome', 'preco', 'marca', 'categoria', 'get_autores')
     search_fields = ('nome', 'marca__nome', 'categoria__descricao')
-    list_filter = ('marca', 'categoria')
+    list_filter = ('marca', 'categoria',)
     ordering = ('nome', 'marca', 'categoria')
     list_per_page = 25

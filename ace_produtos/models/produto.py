@@ -20,7 +20,7 @@ class Produto(models.Model):
         blank=True,
         default=None,
     )
-    cores = models.CharField(max_length=255)  # Armazena cores como uma string
+    cores = models.CharField(max_length=255)  # Armazena cores como uma string para converter depois em um array
     autores = models.ManyToManyField(Autor, related_name="produtos")
 
     def __str__(self):
@@ -33,3 +33,8 @@ class Produto(models.Model):
     def get_cores(self):
         # Retorna a lista de cores a partir da string
         return self.cores.split(",")
+
+    def get_autores(self):
+        # Retorna a lista de autores como uma string de nomes separados por vírgula
+        return ', '.join([autor.nome for autor in self.autores.all()])
+
