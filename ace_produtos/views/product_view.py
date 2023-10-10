@@ -10,7 +10,7 @@ from ace_produtos.serializers.product_serializer import (
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+    serializer_class = ProductDetailSerializer
 
     # def get_serializer_class(self):
     #     if self.action == "list":
