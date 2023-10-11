@@ -1,3 +1,4 @@
 from .category_serializer import CategorySerializer
 from .gender_serializer import GenderSerializer
 from .product_serializer import ProductListSerializer, ProductSerializer, ProductDetailSerializer
+from .highlight_serializer import HighlightSerializer
