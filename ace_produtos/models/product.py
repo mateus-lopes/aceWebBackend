@@ -4,6 +4,17 @@ from ace_produtos.models import Category, Gender
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
+    type = models.CharField(max_length=100, choices=(
+        ('t-shirt', 'Camiseta'),
+        ('shirt', 'Camisa'),
+        ('pants', 'Calça'),
+        ('shorts', 'Shorts'),
+        ('jacket', 'Jaqueta'),
+        ('sweater', 'Suéter'),
+        ('sweatpants', 'Calça de Moletom'),
+        ('hoodie', 'Moletom'),
+        ('sneaker', 'Tênis'),
+    ));
     price = models.DecimalField(max_digits=8, decimal_places=2)
     promotion = models.DecimalField(max_digits=8, decimal_places=0)
     description = models.TextField(null=True, blank=True)

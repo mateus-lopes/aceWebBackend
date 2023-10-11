@@ -3,14 +3,15 @@ from django.db import models
 class Category(models.Model):
     title = models.CharField(max_length=100);
     color = models.CharField(max_length=100, choices=(
-        ('bg-primary', 'Azul'),
+        ('bg-blue-dark', 'Azul Escuro'),
+        ('bg-blue-light', 'Azul Claro'),
         ('bg-secondary', 'Cinza'),
-        ('bg-green-500', 'Verde'),
-        ('bg-red-500', 'Vermelho'),
-        ('bg-yellow-500', 'Amarelo'),
-        ('bg-indigo-500', 'Indigo'),
-        ('bg-purple-500', 'Roxo'),
-        ('bg-pink-500', 'Rosa'),
+        ('bg-green', 'Verde'),
+        ('bg-red', 'Vermelho'),
+        ('bg-yellow-300', 'Amarelo'),
+        ('bg-indigo-400', 'Indigo'),
+        ('bg-purple-400', 'Roxo'),
+        ('bg-pink', 'Rosa'),
     ));
     url = models.CharField(max_length=100, default='');
     
