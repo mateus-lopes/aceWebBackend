@@ -26,9 +26,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Highlight)
 class HighlightAdmin(admin.ModelAdmin):
-    list_display = ('title',)
-    search_fields = ('title',)
-    list_filter = ('title',)
-    ordering = ('title',)
+    list_display = ('title', 'type_img', 'type_product')
+    search_fields = ('title', 'type_img', 'type_product')
+    list_filter = ('title', 'type_img', 'type_product')
+    ordering = ('title', 'type_img', 'type_product')
 
 
