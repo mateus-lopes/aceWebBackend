@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Product, Gender, Highlight
+from .models import Category, Product, Gender, Highlight, TypeAccessory
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -30,5 +30,14 @@ class HighlightAdmin(admin.ModelAdmin):
     search_fields = ('title', 'type_img', 'type_product')
     list_filter = ('title', 'type_img', 'type_product')
     ordering = ('title', 'type_img', 'type_product')
+
+@admin.register(TypeAccessory)
+class TypeAccessoryAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title',)
+    list_filter = ('title',)
+    ordering = ('title',)
+
+
 
 

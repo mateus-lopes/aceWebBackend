@@ -10,13 +10,6 @@ class Highlight(models.Model):
     type_product = models.CharField(max_length=100, choices=(
         ('sneaker', 'Tênis'),
         ('accessories', 'Acessórios'),
-        ('shirt', 'Camisa'),
-        ('pants', 'Calça'),
-        ('shorts', 'Shorts'),
-        ('jacket', 'Jaqueta'),
-        ('sweater', 'Suéter'),
-        ('sweatpants', 'Calça de Moletom'),
-        ('hoodie', 'Moletom'),
     ));
     image = models.ForeignKey(
         Image,

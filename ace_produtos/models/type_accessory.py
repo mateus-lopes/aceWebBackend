@@ -1,6 +1,6 @@
 from django.db import models
 
-class Category(models.Model):
+class TypeAccessory(models.Model):
     title = models.CharField(max_length=100);
     color = models.CharField(max_length=100, choices=(
         ('bg-blue-dark', 'Azul Escuro'),
@@ -23,6 +23,7 @@ class Category(models.Model):
         ('bg-green-blue', 'Verde Azul'),
     ));
     url = models.CharField(max_length=100, default='');
+    
     
     def __str__(self):
         return self.title
