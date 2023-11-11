@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from ace_produtos.views import CategoryViewSet, GenderViewSet, ProductViewSet, HighlightViewSet
+from ace_produtos.views import CategoryViewSet, GenderViewSet, ProductViewSet, HighlightViewSet, TypeAccessoryViewSet
 
 from usuario.router import router as usuario_router
 
@@ -20,6 +20,7 @@ router.register(r"categories", CategoryViewSet)
 router.register(r"genders", GenderViewSet)
 router.register(r"products", ProductViewSet)
 router.register(r"highlights", HighlightViewSet)
+router.register(r"type_accessories", TypeAccessoryViewSet)
 
 urlpatterns = [
     # admin

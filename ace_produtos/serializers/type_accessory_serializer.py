@@ -5,3 +5,4 @@ class TypeAccessorySerializer(ModelSerializer):
     class Meta:
         model = TypeAccessory
         fields = "__all__"
+        depth = 1
